@@ -1,0 +1,101 @@
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-image: url('https://lh3.googleusercontent.com/p/AF1QipOu1MqpMa4zwBgWYzi2jEIPBkovlWj3ThVtVTQB=s1360-w1360-h1020'); /* Path to your background image */
+    background-size: cover; /* Cover the entire area of the body */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* No repeat of the background */
+    height: 100vh; /* Full height of the viewport */
+    width: 100vw; /* Full width of the viewport */
+}
+
+#chat-container {
+    width: 350px;
+    height: 500px;
+    border: 1px solid #888;
+    padding: 10px;
+    position: fixed; /* Changed from relative to fixed to ensure positioning relative to the viewport */
+    top: 50%; /* Position from the top half of the viewport */
+    left: 50%; /* Position from the left half of the viewport */
+    transform: translate(-50%, -50%); /* Correctly centers the chat container */
+    background-color: rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#ai-chatbot {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin-top: 40px; /* Increased margin for more space between logo and AiChatBot */
+    font-size: 32px; /* Adjust the font size as needed */
+}
+
+#chatbox {
+    position: absolute;
+    overflow-y: auto;
+    padding-right: 15px;
+    padding-left: 5px;
+    height: calc(100% - 60px); /* Adjust the height to leave space for input and button */
+    margin-bottom: 10px; /* Space between chatbox and input */
+}
+
+#userInput, button {
+    position: absolute;
+    bottom: 10px;    
+}
+
+#userInput {
+    width: calc(100% - 100px); /* Reserve space for the button, adjust the subtraction value based on button width */
+}
+
+
+button {
+    width: 80px;
+    height: 24px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.user-message {
+    background-color: #eaff00;
+    color: black;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.chatbot-message {
+    background-color: #00bfff;
+    color: black;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#logo img {
+    width: 150px; /* Adjust the width of the logo image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#about-uts {
+    color: black; /* Dark color for the link text */
+    text-decoration: none; /* Removes underline from the link */
+    font-size: 26px; /* Larger font size for heading */
+}
+
+#about-uts-link:hover {
+    text-decoration: underline; /* Adds underline on hover for better user interaction feedback */
+}
