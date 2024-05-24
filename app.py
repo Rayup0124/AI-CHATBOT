@@ -5,7 +5,7 @@ app = Flask(__name__, static_folder='.', static_url_path='')
 
 openai.api_key = 'sk-proj-M1Vw46D0OTe8IropsVlxT3BlbkFJcp1FBQrAdimXlLN97SVX'
 
-with open(r'C:\Users\User\botbuilders_website\material.txt', 'r', encoding='utf-8') as file:
+with open('material.txt', 'r', encoding='utf-8') as file:
     system_prompt = file.read().strip()
 
 @app.route('/')
