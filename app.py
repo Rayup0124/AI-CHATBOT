@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 import openai
+import os
 
 app = Flask(__name__, static_folder='.', static_url_path='')
 
@@ -34,4 +35,5 @@ def chat():
         return jsonify({'message': "No response from OpenAI due to an error."})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=True)
