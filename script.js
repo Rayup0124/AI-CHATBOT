@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const senderElement = document.createElement("strong");
         senderElement.textContent = `${sender}: `;
-        
+
         const messageElement = document.createElement("span");
         messageElement.textContent = message;
 
