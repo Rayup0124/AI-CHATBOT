@@ -1,12 +1,15 @@
 body {
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    background-image: url('https://lh3.googleusercontent.com/p/AF1QipOu1MqpMa4zwBgWYzi2jEIPBkovlWj3ThVtVTQB=s1360-w1360-h1020'); /* Path to your background image */
-    background-size: cover; /* Cover the entire area of the body */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* No repeat of the background */
-    height: 100vh; /* Full height of the viewport */
-    width: 100vw; /* Full width of the viewport */
+    margin: 0;
+    padding: 0;
+    background-image: url('https://lh3.googleusercontent.com/p/AF1QipOu1MqpMa4zwBgWYzi2jEIPBkovlWj3ThVtVTQB=s1360-w1360-h1020');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: white;
 }
 
 #chat-container {
@@ -14,49 +17,56 @@ body {
     height: 500px;
     border: 1px solid #888;
     padding: 10px;
-    position: fixed; /* Changed from relative to fixed to ensure positioning relative to the viewport */
-    top: 50%; /* Position from the top half of the viewport */
-    left: 50%; /* Position from the left half of the viewport */
-    transform: translate(-50%, -50%); /* Correctly centers the chat container */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.3);
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
 }
 
 #ai-chatbot {
     text-align: center;
     color: white;
     font-weight: bold;
-    margin-top: 40px; /* Increased margin for more space between logo and AiChatBot */
-    font-size: 32px; /* Adjust the font size as needed */
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #chatbox {
-    position: absolute;
+    flex-grow: 1;
     overflow-y: auto;
-    padding-right: 15px;
-    padding-left: 5px;
-    height: calc(100% - 60px); /* Adjust the height to leave space for input and button */
-    margin-bottom: 10px; /* Space between chatbox and input */
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
-#userInput, button {
-    position: absolute;
-    bottom: 10px;    
+#input-container {
+    display: flex;
 }
 
 #userInput {
-    width: calc(100% - 100px); /* Reserve space for the button, adjust the subtraction value based on button width */
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
-
 
 button {
     width: 80px;
-    height: 24px;
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
+    border-radius: 0 5px 5px 0;
+    border: 1px solid #ccc;
+    background-color: #00bfff;
+    color: white;
+    cursor: pointer;
 }
 
 ul {
@@ -70,6 +80,7 @@ ul {
     color: black;
     padding: 5px;
     margin-bottom: 5px;
+    border-radius: 5px;
 }
 
 .chatbot-message {
@@ -77,6 +88,7 @@ ul {
     color: black;
     padding: 5px;
     margin-bottom: 5px;
+    border-radius: 5px;
 }
 
 #logo {
@@ -86,16 +98,40 @@ ul {
 }
 
 #logo img {
-    width: 150px; /* Adjust the width of the logo image */
-    height: auto; /* Maintain aspect ratio */
+    width: 150px;
+    height: auto;
 }
 
 #about-uts {
-    color: black; /* Dark color for the link text */
-    text-decoration: none; /* Removes underline from the link */
-    font-size: 26px; /* Larger font size for heading */
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+    box-sizing: border-box;
+    width: 350px;
 }
 
-#about-uts-link:hover {
-    text-decoration: underline; /* Adds underline on hover for better user interaction feedback */
+#about-uts h2, #about-uts p {
+    margin: 10px 0;
+}
+
+a {
+    color: blue;
+    text-decoration: underline;
+}
+
+#watermark {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+}
+
+#watermark span {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
 }
