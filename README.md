@@ -1,6 +1,3 @@
----
-
-```markdown
 🤖 UTS AI Chatbot
 
 Welcome to the UTS AI Chatbot – a conversational assistant built to answer any questions related to the University of Technology Sydney (UTS). This project was developed as part of an Object-Oriented Programming (OOP) assignment.
@@ -46,7 +43,4 @@ This project was developed for an Object-Oriented Programming course assignment 
 
 📬 Contact
 
-Feel free to open an issue or fork the project if you’d like to contribute or have suggestions!
-```
-
----
+Feel free to open an issue or fork the project if you'd like to contribute or have suggestions!
