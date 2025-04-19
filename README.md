@@ -39,7 +39,7 @@ This chatbot is useful for:
 - Students applying OOP in practical projects
 
 🎓 About
-This project was developed for an Object-Oriented Programming course assignment at the University of Technology Sydney (UTS).
+This project was developed for an Object-Oriented Programming course assignment at the University of Technology Sarawak (UTS).
 
 📬 Contact
 
