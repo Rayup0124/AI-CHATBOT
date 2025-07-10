@@ -22,7 +22,7 @@ def chat():
     try:
         # Use the system_prompt from the file instead of a hardcoded message
         completion = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4-turbo",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_input},
