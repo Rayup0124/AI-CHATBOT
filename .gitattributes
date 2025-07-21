@@ -1,2 +1,5 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# 忽略本地环境变量文件
+.dev.vars
+
+# 忽略 Node.js 模块文件夹
+node_modules
